@@ -42,4 +42,6 @@ public class RepayedTools extends JavaPlugin {
     private void loadCommands() {
 
     }
+
+    // PS: I love OOP :D
 }

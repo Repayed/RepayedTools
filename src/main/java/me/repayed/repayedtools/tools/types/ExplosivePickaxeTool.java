@@ -8,6 +8,10 @@ import org.bukkit.block.Block;
 
 public class ExplosivePickaxeTool extends Tool {
 
+    /*
+    TODO:
+    - Create the item from the configuration.
+     */
     public ExplosivePickaxeTool() {
         super("ExplosivePickaxe",
                 new ItemBuilder(Material.DIAMOND_PICKAXE)
@@ -20,6 +24,12 @@ public class ExplosivePickaxeTool extends Tool {
                         .build());
     }
 
+    /*
+    TODO:
+    - Check if the block is in the blocked blocks (ha get it?) list. If it is then don't remove that block, and continue to the others.
+    - Check what way the the player is facing and change the min/max X,Y,Z's since it doesn't work correctly as of now.
+    - Make it so the explosion effect only happens if it's allowed in the configuration.
+     */
     @Override
     public void useTool(Location location) {
         final int minX = location.getBlockX() - 1;

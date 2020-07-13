@@ -9,6 +9,10 @@ import org.bukkit.inventory.ItemStack;
 
 public class BlockBreakListener implements Listener {
 
+    /*
+    TODO:
+    - Somehow make this code more cleaner I really don't like it.
+     */
     @EventHandler
     public void onBlockBreak(BlockBreakEvent event) {
         if (event.getPlayer().getItemInHand() != null) {

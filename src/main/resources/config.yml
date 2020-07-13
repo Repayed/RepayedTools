@@ -1,0 +1,47 @@
+options:
+  permissions:
+    give-tool: "repayedtools.admin.give"
+    admin-messages: "repayedtools.admin.messages"
+    tools-reload: "repayedtools.admin.reload"
+  tools:
+    explosive-pickaxe:
+      # If enabled, when the player mines a block. An explosion effect will show up.
+      # Example: gyazo.link
+      explosion-effect: true # true or false
+      # If enabled, the explosive pickaxe will have a hidden enchantment to make
+      # the item look enchanted.
+      enchanted: true # true or false
+        material: DIAMOND_PICKAXE
+        name: "&cExplosive Pickaxe"
+        lore:
+          - "&7An explosive pickaxe which mines a &43x3x3 &7radius."
+          - ""
+          - "&7Want to get another one? Check out our store"
+          - "&8- &7store.gyrenetwork.net"
+  messages:
+    no-permission:
+      - ""
+      - "&4&l*&c&l* &cSorry! You don't have enough permissions to use this command."
+      - ""
+    help-menu:
+      - ""
+      - "&c&lrepayed&4&lTools"
+      - "&7Below are all of the commands for the plugin."
+      - ""
+      - "&8- &7/tools give (player) <tool-name> [amount] &8- &7Gives player a tool."
+      - "&8- &7/tools list &8- Shows the list of all tools."
+      - "&8- &7/tools reload &8- &7Reloads the plugins config."
+      - ""
+    sent-tool:
+      - ""
+      - "&2&l*&a&l* &aYou have sent &2x%amount% &2%tool%'s &ato &2%player%"
+      - ""
+    received-tool:
+      - ""
+      - "&2&l*&a&l* &aYou have received &2x%amount% &2%tool%'s&a."
+      - ""
+    reloaded-config:
+      - ""
+      - "&c&lrepayed&4&lTools"
+      - "&2&l*&a&l* &aYou have reloaded the configuration."
+      - ""
