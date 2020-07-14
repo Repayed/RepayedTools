@@ -5,6 +5,12 @@ options:
     tools-reload: "repayedtools.admin.reload"
   tools:
     explosive-pickaxe:
+      toggles:
+        # If enabled, when a player mines a block and the the 3x3x3 of blocks is exploded,
+        # the items that would normally be dropped by mining them, will drop.
+        #
+        # If disabled, they won't be dropped and instead will simply be removed. (GOOD TO REDUCE LAG)
+        allow-drops: false
       # If enabled, when the player mines a block. An explosion effect will show up.
       # Example: gyazo.link
       explosion-effect: true # true or false
