@@ -5,7 +5,6 @@ import me.repayed.repayedtools.utils.ItemBuilder;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
-import org.bukkit.entity.Player;
 
 public class ExplosivePickaxeTool extends Tool {
 
@@ -33,12 +32,12 @@ public class ExplosivePickaxeTool extends Tool {
      */
     @Override
     public void useTool(Location location) {
-        // Logic for player facing down
+        // Logic for player facing up
 //        final int minX = location.getBlockX() - 1;
 //        final int maxX = location.getBlockX() + 2;
 //
-//        final int minY = location.getBlockY() - 2;
-//        final int maxY = location.getBlockY() + 2;
+//        final int minY = location.getBlockY();
+//        final int maxY = location.getBlockY() + 3;
 //
 //        final int minZ = location.getBlockZ() - 1;
 //        final int maxZ = location.getBlockZ() + 2;
@@ -51,25 +50,24 @@ public class ExplosivePickaxeTool extends Tool {
 //                }
 //            }
 //        }
-
-        // Logic for player facing up
-        final int minX = location.getBlockX() - 1;
-        final int maxX = location.getBlockX() + 2;
-
-        final int minY = location.getBlockY();
-        final int maxY = location.getBlockY() + 3;
-
-        final int minZ = location.getBlockZ() - 1;
-        final int maxZ = location.getBlockZ() + 2;
-
-        for(int i = minX; i < maxX; i++) {
-            for(int j = minY; j < maxY; j++) {
-                for(int k = minZ; k < maxZ; k++) {
-                    Block block = location.getWorld().getBlockAt(i, j, k);
-                    block.setType(Material.AIR);
-                }
-            }
-        }
+        // Logic for player facing down
+//        final int minX = location.getBlockX() - 1;
+//        final int maxX = location.getBlockX() + 2;
+//
+//        final int minY = location.getBlockY() - 2;
+//        final int maxY = location.getBlockY() + 1;
+//
+//        final int minZ = location.getBlockZ() - 1;
+//        final int maxZ = location.getBlockZ() + 2;
+//
+//        for(int i = minX; i < maxX; i++) {
+//            for(int j = minY; j < maxY; j++) {
+//                for(int k = minZ; k < maxZ; k++) {
+//                    Block block = location.getWorld().getBlockAt(i, j, k);
+//                    block.setType(Material.AIR);
+//                }
+//            }
+//        }
 
         location.getWorld().createExplosion(location, 0.0F);
     }
